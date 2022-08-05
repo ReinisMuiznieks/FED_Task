@@ -1,0 +1,50 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Quiz";
+}
+<script src="~/js/quiz.js" asp-append-version="true"></script>
+
+<div class="container text-center">
+    <div class="card" style="margin-bottom: 100px">
+      <div class="card-body">
+        <p id="question" style="text-align: center;"></p>
+      </div>
+    </div>
+
+   <div class="row" style="margin-bottom: 100px">
+    <div class="col">
+        <button class="answer"></button>
+    </div>
+    <div class="col">
+        <button class="answer"></button>
+    </div>
+    <div class="col">
+        <button class="answer"></button>
+    </div>
+    <div class="col">
+        <button class="answer"></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 col-md-4">
+            <div class="card">
+              <div class="card-body">
+                 <p>Score: <span id="finalscore">0</span></p>
+              </div>
+            </div>
+    </div>
+    <div class="col-6 col-md-4">
+             <div class="card">
+              <div class="card-body">
+                 <p>Question <span id="display">1</span>/10</p>
+              </div>
+            </div>
+    </div>
+    <div class="col-6 col-md-4">
+        <a href="/Quiz" id="playagain"><span id="playagain">Restart</span></a>
+    </div>
+  </div>
+</div>
+
